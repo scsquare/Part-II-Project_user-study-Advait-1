@@ -1,21 +1,25 @@
 /*shared css code between all pages. Excludes color variables*/
-
 h1{
   text-align: center;
   color: var(--lighttext);
 }
+html{
+  height:90vh;
+}
 body {
   background-color: var(--background);
+  max-height: 80vh;
 }
 div {
   background-color: var(--foreground);
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 5px;
-  margin-top: 30px;
+  margin-top: 2vh;
   margin: 0 auto;  
   text-align: center;
-  position: relative
+  position: relative;
+  max-height:85vh
 }
 button {
   font-size: 16px;
@@ -32,5 +36,5 @@ button:active {
 }
 p {
   font-size: 1em;
-  margin: 20px;
+  margin: 2vh;
 }

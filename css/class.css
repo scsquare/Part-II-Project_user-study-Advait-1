@@ -1,8 +1,14 @@
 /* a bunch of classes */
 
-
-button.to-right{
-    position: absolute;
-    bottom: 10px;
-    right: 10px
-}
+div.grid-container{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+    text-align: center;
+    font-size: 30px;
+    display: grid;
+    grid-template-columns:repeat(8, 1fr);
+    grid-template-rows:repeat(8, 1fr) ;
+    gap: 10px;
+    padding: 10px;
+    max-height: 65vh;
+  }
