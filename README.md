@@ -5,22 +5,22 @@ File structure:
 index.html
 finished.html
 css
-*main.css
-*index.css
-*part1.css
-*part2.css
+  *main.css
+  *index.css
+  *part1.css
+  *part2.css
 part1
-*Intro1.html
-*Task1_A1.html
-*Task1_A2.html
-*...
-*Task1_B1.html
-*Task1_B2.html
-*...
-*Outro1.html
+  *Intro1.html
+  *Task1_A1.html
+  *Task1_A2.html
+  *...
+  *Task1_B1.html
+  *Task1_B2.html
+  *...
+  *Outro1.html
 part2
-*Intro2.html
-*Task2_A1.html
-*...
-*Task2_B1.html
-*...
+  *Intro2.html
+  *Task2_A1.html
+  *...
+  *Task2_B1.html
+  *...
