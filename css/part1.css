@@ -1,0 +1,14 @@
+/*CSS code unique to this page, eg. color scheme*/
+
+
+:root {
+    --background: #4d3727;
+    --foreground: #F5E8B7;
+    --button: #FFBB5C;
+    --hover: #FF9B50;
+    --border: #000000;
+    --active: #ff9341;
+    --lighttext: #FFFFFF;
+    --darktext: #000000;
+  }
+  
