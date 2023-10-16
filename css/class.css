@@ -1,13 +1,13 @@
 /* a bunch of classes */
 :root {
-  --playlist-width: 40%;
+  --playlist-width: 50%;
   --input-width: 10%;
 }
 
 .playlist-wrapper{
     position: relative;
     width: 100%; 
-    height: 90%
+    height: 100%;
 }
 
 div.colored{
@@ -19,7 +19,7 @@ div.colored{
 
 button.bottom-right{
     position: absolute;
-    bottom:5vh;
+    bottom:2vh;
     right:1vw;
 }
 
@@ -31,19 +31,22 @@ div.flex-row {
    
 .playlist-column {
     flex: var(--playlist-width);
+    height: 90%;
 }
 
 .ranking-column {
     flex: calc(100%- var(--playlist-width));
     position: relative;
+    height: 90%;
+
 }
 
 
 /*mess for sortable list*/
 .sortable-list {
     margin: 0 auto; /*centers the thing*/
-    width: 50vw; 
-    height: 70%;
+    width: 40vw; 
+    height: 80%;
     padding: 2vw;
     background: var(--sortable-list);
     border-radius: 7px;
@@ -52,17 +55,23 @@ div.flex-row {
 .sortable-list .item {
     list-style: none;
     display: flex;
+    flex-direction: column;
     cursor: grab;
     background: var(--sortable-list-item);
     align-items: center;
     border-radius: 5px;
     margin-bottom: 1vh;
-    border: 1px solid #ccc;
     justify-content: space-between;
-    height: 10%;
+    height: 10.5%;
+    width: 100%;
+    border: 1px solid rgb(255, 251, 228); 
 }
 
-.text{
+div.text{
+    /*why does this not work with .item.text??*/
     display: flex;
     align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
