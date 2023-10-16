@@ -14,6 +14,7 @@ div.colored{
     background-color: var(--foreground);
 }
 
+
 /*TODO: make button wrapper to stay bottom right*/
 
 button.bottom-right{
@@ -34,13 +35,34 @@ div.flex-row {
 
 .ranking-column {
     flex: calc(100%- var(--playlist-width));
+    position: relative;
 }
 
-.fix-width{
-    width: 8%;
-}
 
-img.arrow{
-    width: 80%;
+/*mess for sortable list*/
+.sortable-list {
+    margin: 0 auto; /*centers the thing*/
+    width: 50vw; 
+    height: 70%;
+    padding: 2vw;
+    background: var(--sortable-list);
+    border-radius: 7px;
+  }
+
+.sortable-list .item {
+    list-style: none;
+    display: flex;
+    cursor: grab;
+    background: var(--sortable-list-item);
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 1vh;
+    border: 1px solid #ccc;
+    justify-content: space-between;
     height: 10%;
+}
+
+.text{
+    display: flex;
+    align-items: center;
 }
