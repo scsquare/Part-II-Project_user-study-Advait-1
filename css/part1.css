@@ -5,7 +5,7 @@
     --background: #4d3727;
     --foreground: #F5E8B7;
     --button: #feffdb;
-    --hover: #FF9B50;
+    --hover: #ffb67e;
     --border: #000000;
     --active: #ff9341;
     --lighttext: #FFFFFF;
@@ -13,5 +13,7 @@
 
     --sortable-list:#FFBB5C;
     --sortable-list-item:#feffdb;
+    --sortable-list-item-hover:#ffb67e;
+
 }
   

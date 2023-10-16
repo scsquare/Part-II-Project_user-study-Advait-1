@@ -1,9 +1,9 @@
 /*shared css code between all pages. Excludes color variables*/
 
-/*TESTING USE CSS
+/*TESTING USE CSS*/
 * { border: 1px solid red; }
 
-TESTING USE CSS END*/
+/*TESTING USE CSS END*/
 
 h1{
   text-align: center;
@@ -28,7 +28,7 @@ div {
   text-align: center;
   position: relative;
   width:95vw;
-  height:85vh;
+  height:100%;
 
 }
 button {

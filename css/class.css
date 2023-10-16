@@ -1,13 +1,15 @@
 /* a bunch of classes */
 :root {
-  --playlist-width: 50%;
+  --playlist-width: 60%;
   --input-width: 10%;
+  --column-height: 75vh;
 }
 
 .playlist-wrapper{
+    /*more like container: sets size for playlist to fill*/
     position: relative;
-    width: 100%; 
-    height: 100%;
+    width: 30vw; 
+    height: var(--column-height);
 }
 
 div.colored{
@@ -19,7 +21,7 @@ div.colored{
 
 button.bottom-right{
     position: absolute;
-    bottom:2vh;
+    bottom:1vh;
     right:1vw;
 }
 
@@ -31,32 +33,31 @@ div.flex-row {
    
 .playlist-column {
     flex: var(--playlist-width);
-    height: 90%;
+    height:var(--column-height);
 }
 
 .ranking-column {
     flex: calc(100%- var(--playlist-width));
     position: relative;
-    height: 90%;
+    height: var(--column-height);
 
 }
 
 
 /*mess for sortable list*/
-.sortable-list {
+.sortable-list{
     margin: 0 auto; /*centers the thing*/
     width: 40vw; 
     height: 80%;
     padding: 2vw;
     background: var(--sortable-list);
     border-radius: 7px;
-  }
+}
 
-.sortable-list .item {
+.sortable-list .item { /*do NOT remove that space it has a different meaning*/
     list-style: none;
     display: flex;
-    flex-direction: column;
-    cursor: grab;
+    cursor: move ;
     background: var(--sortable-list-item);
     align-items: center;
     border-radius: 5px;
@@ -67,11 +68,21 @@ div.flex-row {
     border: 1px solid rgb(255, 251, 228); 
 }
 
-div.text{
-    /*why does this not work with .item.text??*/
+
+
+.item .text{
     display: flex;
     align-items: center;
     width: 100%;
     padding: 0;
     margin: 0;
 }
+
+.item.dragging {
+    opacity: 0.6;
+}
+
+.item.dragging .text {
+    /*the one we are holding goes invisible in the list*/
+    opacity: 0;
+  }
