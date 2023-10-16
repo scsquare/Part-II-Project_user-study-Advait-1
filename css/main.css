@@ -5,13 +5,13 @@ h1{
 }
 html{
   height:90vh;
+  width: 90wh
 }
 body {
   background-color: var(--background);
   max-height: 80vh;
 }
 div {
-  background-color: var(--foreground);
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 5px;
@@ -19,7 +19,9 @@ div {
   margin: 0 auto;  
   text-align: center;
   position: relative;
-  max-height:85vh
+  height:85vh;
+  width:95vw
+
 }
 button {
   font-size: 16px;

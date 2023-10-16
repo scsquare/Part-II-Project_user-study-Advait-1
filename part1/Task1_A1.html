@@ -14,25 +14,30 @@
 <body>
   <h1>Part 1: sort according to tempo</h1>
 
-  <div>
-    <p >Reminder: same column = same tempo. Left is slower, right is faster. </p>
-    <div class="grid-container">
-        <div>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/39uwXNpe9WSStfFhlibIRV?utm_source=generator" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
-        </div>
-        <div>2</div>
-        <div>3</div>  
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>0</div>
+  <div class="flex-row colored">
+    <div class="playlist-column">
+        <iframe class="playlist-wrapper" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7FnELgHtyLP0bkGjwlu8L5?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
+    <div class="ranking-column">
+        <p>Reminder: same column = same tempo. Left is slower, right is faster. </p>
+            <form>
+                <label class="fix-width" for="bpm_0"> Slowest </label>
+                <input class="fix-width" type="text" id="bpm_0" name="bpm_0">
+                <input class="fix-width" type="text" id="bpm_1" name="bpm_1">
+                <input class="fix-width" type="text" id="bpm_2" name="bpm_2">
+                <input class="fix-width" type="text" id="bpm_3" name="bpm_3">
+                <input class="fix-width" type="text" id="bpm_4" name="bpm_4">
+                <input class="fix-width" type="text" id="bpm_5" name="bpm_5">
+                <input class="fix-width" type="text" id="bpm_6" name="bpm_6">
+                <input class="fix-width" type="text" id="bpm_7" name="bpm_7">
+                <label class="fix-width" for="bpm_7"> Fastest </label>
+            </form>
+        <img src="../pictures/arrow.png" class="arrow">
     <br>
-    <button onclick="document.location='Task1_A1.html'">
+    <button class="bottom-right" onclick="document.location='Task1_A1.html'">
       Continue to next task
     </button>
+    </div>  
   </div>
 
 </body>
