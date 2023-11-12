@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-uk">
+
+<head>
+  <meta charset="utf-8">
+  <title>Part 1</title>
+  <link href="../css/main.css" rel="stylesheet">
+  <link href="../css/index.css" rel="stylesheet">
+  <link href="../css/class.css" rel="stylesheet">
+
+  <script src="../js/on_click_next_page.js" ></script>
+
+
+  <script src="../js/save_before_tasks_questions.js" defer></script>
+
+</head>
+
+<body>
+  <h1>Some questions before we start...</h1>
+
+  <div class="colored">
+    <form name="before-tasks" action="" method="GET">
+        How much time do you spend making music per week? <br>
+        <input type="text" name="code" id="time" value=""> <br>
+        What is the highest music related qualification you have attained? <br>
+        <input type="text" name="code" id="qualification" value=""><br>
+        <input type="button" name="button" id="questionsButton" value="Click" onClick="saveBeforeTasksQuestions(this.form)">
+      </form>
+  </div>
+
+</body>
+
+</html>

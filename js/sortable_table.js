@@ -3,7 +3,6 @@ const items = sortableList.querySelectorAll(".item"); //from the sortableList, s
 
 items.forEach(item => {
     item.addEventListener("dragstart", () => {
-        // Adding dragging class to item after a delay
         //item.classList.add("dragging")
         setTimeout(() => item.classList.add("dragging"), 0); 
     });
@@ -22,7 +21,7 @@ items.forEach(item => {
 const updateSortableList = (e) => {
     e.preventDefault();
     const draggingItem = document.querySelector(".dragging");
-    // Getting all items except currently dragging and making array of them
+    // Getting all items except currently dragging and ... making array of them
     let siblings = [...sortableList.querySelectorAll(".item:not(.dragging)")];
 
     // Finding the sibling after which the dragging item should be placed

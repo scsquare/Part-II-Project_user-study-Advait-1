@@ -1,0 +1,19 @@
+/*CSS code unique to this page, eg. color scheme*/
+
+
+:root {
+    --background: #555843;
+    --foreground: #A7D397;
+    --button: #84cd69;
+    --hover: #52a036;
+    --border: #000000;
+    --active: #1d6d00;
+    --lighttext: #FFFFFF;
+    --darktext: #000000;
+
+    --sortable-list:#D6CC99;
+    --sortable-list-item:#B5CB99;
+    --sortable-list-item-hover:#c2ff73;
+
+}
+  

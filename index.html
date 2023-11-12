@@ -8,6 +8,11 @@
   <link href="css/index.css" rel="stylesheet">
   <link href="css/class.css" rel="stylesheet">
 
+
+  <script src="js/storage_check.js" defer></script>
+  <script src="js/save_code.js" defer></script>
+
+
 </head>
 
 <body>
@@ -15,10 +20,19 @@
 
   <div class="colored">
     <p>This is some generic description</p>
-    <button onclick="document.location='part1/Intro1.html'">
-      Click me to start
-    </button>
+    <br>
+    <br>
+
+    <form name="myForm" action="" method="GET">
+      By typing your name here you are signing this consent form: <br>
+      <input type="text" name="name" id="name" value=""> <br> 
+      Enter your code here to start: <br>
+      <input type="text" name="code" id="code" value=""><br>
+      <input type="button" name="button" id="codeButton" value="Click" onClick="saveCode(this.form)">
+    </form>
+
   </div>
 </body>
 
 </html>
+

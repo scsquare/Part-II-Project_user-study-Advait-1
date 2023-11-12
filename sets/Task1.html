@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-uk">
+
+<head>
+  <meta charset="utf-8">
+  <title>Part 1</title>
+  <link href="../css/main.css" rel="stylesheet">
+  <link href="../css/tempo.css" rel="stylesheet">
+  <link href="../css/class.css" rel="stylesheet">
+
+  <!--These canNOT be deferred-->
+  <script src="../js/get_current_page_code.js"></script>
+  <script src="../js/on_load_page.js"></script> <!--this has to run AFTER get current page code-->
+
+  <!--these have to be deferred-->
+  <script src="../js/get_current_playlist.js" defer></script>
+  <script src="../js/sortable_table.js" defer></script>
+  <script src="../js/on_click_next_page.js" defer></script>
+
+
+</head>
+
+<body>
+  <h1>Part 1: sort according to tempo</h1>
+  <div class="flex-row colored">
+    <div class="playlist-column">
+        <iframe id="spotify-playlist" class="playlist-wrapper" style="border-radius:12px" src="" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+    <div class="ranking-column">
+        <p>Reminder blah idk why am i doing this </p>
+        <ul class="sortable-list">
+            <li class="item" draggable="true">
+              <div class="text">
+                <span>Song 1</span>
+              </div>
+            </li>
+            <li class="item" draggable="true">
+              <div class="text">
+                <span>Song 2</span>
+              </div>
+            </li>
+            <li class="item" draggable="true">
+              <div class="text">
+                <span>Song 3</span>
+              </div>
+            </li>
+            <li class="item" draggable="true">
+              <div class="text">
+                <span>Song 4</span>
+              </div>
+            </li>
+            <li class="item" draggable="true">
+              <div class="text">
+                <span>Song 5</span>
+              </div>
+            </li>
+            <li class="item" draggable="true">
+              <div class="text">
+                <span>Song 6</span>
+              </div>
+               
+            </li>
+            <li class="item" draggable="true">
+                <div class="text">
+                  <span>Song 7</span>
+                </div>
+              </li>
+              <li class="item" draggable="true">
+                <div class="text">
+                  <span>Song 8</span>
+                </div>
+              </li>
+          </ul>
+    </div>  
+    <button id="cont" class="bottom-right">
+        Continue to next task
+      </button>
+  </div>
+
+</body>
+
+</html>
