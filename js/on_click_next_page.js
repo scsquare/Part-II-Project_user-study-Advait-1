@@ -1,12 +1,10 @@
 function writeResults(){
-    const sortableList = document.querySelector(".sortable-list"); //select the first thing with class .sortable-list
-
-    const items = sortableList.querySelectorAll(".item .text span"); //from the sortableList, select all spans with class .item .text 
+    var items= document.getElementsByClassName("song-name");
 
     const texts=[];
 
     for (let i=0;i<8;i++){
-        var temp=Number((items[i].innerText).slice(-1))-1; //changes it to 0-7
+        var temp=Number((items[i].innerText)[0])-1; //changes it to 0-7
         texts[i]=temp;
     }
 
@@ -18,7 +16,7 @@ function writeResults(){
             alert("ERROR on_click_next_page: store failed")
         }
 
-        alert(current_page_code+":"+localStorage.getItem(current_page_code)); //testing purposes
+        //alert(current_page_code+":"+localStorage.getItem(current_page_code)); //testing purposes
 
     } else {
         // Sorry! No Web Storage support..

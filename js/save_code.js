@@ -36,7 +36,7 @@ function saveCode (form) {
     }
     else{
 
-      localStorage.setItem("name","{name:'".concat(name,"'}")); //consent
+      localStorage.setItem("name","{'name':'".concat(name,"'}")); //consent
 
       alert("You entered the code " +code);
       code="1".concat(code);

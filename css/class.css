@@ -48,7 +48,7 @@ div.flex-row {
 .sortable-list{
     margin: 0 auto; /*centers the thing*/
     width: 40vw; 
-    height: 80%;
+    height: 75%;
     padding: 2vw;
     background: var(--sortable-list);
     border-radius: 7px;
@@ -68,7 +68,9 @@ div.flex-row {
     border: 1px solid rgb(255, 251, 228); 
 }
 
-
+.item.dragging i img{
+    opacity: 0.2;
+}
 
 .item .text{
     display: flex;
@@ -82,7 +84,19 @@ div.flex-row {
     opacity: 0.6;
 }
 
+
 .item.dragging .text {
     /*the one we are holding goes invisible in the list*/
-    opacity: 0;
+    opacity: 0.2;
   }
+
+textarea.larger {
+    width: 50%;
+    height: 10vh;
+    padding: 2vh;
+    margin: 3vh;
+}
+
+.song-name{
+    margin-left: 5px;
+}

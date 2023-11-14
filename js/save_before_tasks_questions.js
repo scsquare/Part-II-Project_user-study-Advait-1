@@ -13,9 +13,9 @@ function saveBeforeTasksQuestions (form) {
 
 }
 
-var button = document.getElementById("questionsButton");
+var qualification = document.getElementById("qualification");
 
-button.addEventListener("keypress", function(event) {
+qualification.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
     event.preventDefault();
     document.getElementById("questionsButton").click();

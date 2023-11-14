@@ -4,6 +4,7 @@ const items = sortableList.querySelectorAll(".item"); //from the sortableList, s
 items.forEach(item => {
     item.addEventListener("dragstart", () => {
         //item.classList.add("dragging")
+        //this is needed to make sure the thing you're dragging stays visible - why
         setTimeout(() => item.classList.add("dragging"), 0); 
     });
     // Removing dragging class from item on dragend event
@@ -36,4 +37,6 @@ const updateSortableList = (e) => {
 }
 
 sortableList.addEventListener("dragover", updateSortableList);
-sortableList.addEventListener("dragenter", e => e.preventDefault());
+sortableList.addEventListener("dragenter", function (e){
+    e.preventDefault();
+} );

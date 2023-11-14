@@ -4,7 +4,7 @@ function getRankings(){
     for (var i=0;i<init_code.length;i++){
         if (init_code[i]>="A"){
             var ranking=localStorage.getItem(init_code[i]);
-            rankings.push("{"+init_code[i]+":"+ranking+"}");
+            rankings.push("{'"+init_code[i]+"':"+ranking+"}");
         }
     }
     localStorage.setItem("rankings",rankings);
@@ -28,7 +28,7 @@ function promptDownload(content){
 var resultsText=document.getElementById("results");
 var results=(localStorage.getItem("name")).concat(",",localStorage.getItem("beforeTaskQuestions"),",",getRankings(),",",localStorage.getItem("afterTaskQuestions"));
 localStorage.setItem("results",results);
-resultsText.innerHTML=results;
+//resultsText.innerHTML=results;
 
 
 var promptDownloadButton=document.getElementById("prompt-download");

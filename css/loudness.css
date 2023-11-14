@@ -2,8 +2,8 @@
 
 
 :root {
-    --background: #555843;
-    --foreground: #A7D397;
+    --background: #445D48;
+    --foreground: #B0D9B1;
     --button: #84cd69;
     --hover: #52a036;
     --border: #000000;
@@ -11,8 +11,8 @@
     --lighttext: #FFFFFF;
     --darktext: #000000;
 
-    --sortable-list:#D6CC99;
-    --sortable-list-item:#B5CB99;
+    --sortable-list:#79AC78;
+    --sortable-list-item:#d4e4d0;
     --sortable-list-item-hover:#c2ff73;
 
 }
