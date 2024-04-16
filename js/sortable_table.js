@@ -1,38 +1,36 @@
 const sortableList = document.querySelector(".sortable-list"); //select the first thing with class .sortable-list
 const items = sortableList.querySelectorAll(".item"); //from the sortableList, select all things with class .item
 
-items.forEach(item => {
+items.forEach(function(item){
     item.addEventListener("dragstart", () => {
-        //item.classList.add("dragging")
-        //this is needed to make sure the thing you're dragging stays visible - why
-        setTimeout(() => item.classList.add("dragging"), 0); 
+        //this is needed to make sure the thing you're dragging stays visible
+        setTimeout(function(){
+            item.classList.add("dragging")
+        }, 1); 
     });
     // Removing dragging class from item on dragend event
-    item.addEventListener("dragend", () => item.classList.remove("dragging"));
-
-    /* This attempts to color the thing on mouse enter, but its still buggy.
-    item.addEventListener('mouseenter', function () {
-        this.classList.add('hover');
+    item.addEventListener("dragend", function(){
+        item.classList.remove("dragging")
     });
-    item.addEventListener('mouseleave', function () {
-        this.classList.remove('hover');
-    });*/
 });
 
-const updateSortableList = (e) => {
+function updateSortableList(e){
     e.preventDefault();
     const draggingItem = document.querySelector(".dragging");
-    // Getting all items except currently dragging and ... making array of them
+
     let siblings = [...sortableList.querySelectorAll(".item:not(.dragging)")];
 
     // Finding the sibling after which the dragging item should be placed
     //nb y-coordinate increases as we go down. weird.
-    let nextSibling = siblings.find(sibling => {
-        return e.clientY <= sibling.offsetTop + sibling.offsetHeight*3;
-        //why is this 3? Trial and error-ed but why??
-    });
 
-    // Inserting the dragging item before the found sibling
+    function checkBelowCursor(sibling){
+        return (e.clientY - sortableList.offsetTop <= sibling.offsetTop + sibling.offsetHeight/2);
+    }
+
+    let nextSibling = siblings.find(checkBelowCursor);
+
+    // Inserting the dragging item before the found next sibling
+    console.log(e.pageY,sortableList.offsetTop,draggingItem.offsetTop,draggingItem.offsetHeight)
     sortableList.insertBefore(draggingItem, nextSibling);
 }
 
