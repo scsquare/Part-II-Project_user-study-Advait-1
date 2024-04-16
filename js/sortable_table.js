@@ -24,13 +24,12 @@ function updateSortableList(e){
     //nb y-coordinate increases as we go down. weird.
 
     function checkBelowCursor(sibling){
-        return (e.clientY - sortableList.offsetTop <= sibling.offsetTop + sibling.offsetHeight/2);
+        return (e.pageY - sortableList.offsetTop <= sibling.offsetTop + sibling.offsetHeight/2);
     }
 
     let nextSibling = siblings.find(checkBelowCursor);
 
     // Inserting the dragging item before the found next sibling
-    console.log(e.pageY,sortableList.offsetTop,draggingItem.offsetTop,draggingItem.offsetHeight)
     sortableList.insertBefore(draggingItem, nextSibling);
 }
 
